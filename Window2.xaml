@@ -1,0 +1,23 @@
+﻿<Window x:Class="TestTX2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTX2"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800"
+        FontSize="20">
+
+    <Grid>
+        <DataGrid x:Name="dtgNhanVienChon" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Họ tên" Binding="{Binding hoten}"/>
+                <DataGridTextColumn Header="Loại nhân viên" Binding="{Binding loainv}"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding ngaysinh}"/>
+                <DataGridTextColumn Header="Số tiền bán hàng" Binding="{Binding sotienbanhang}"/>
+                <DataGridTextColumn Header="Gioi tính" Binding="{Binding gioitinh}"/>
+                <DataGridTextColumn Header="Tiền hoa hồng" Binding="{Binding tienhoahong}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
