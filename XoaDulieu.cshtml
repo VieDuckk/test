@@ -1,0 +1,57 @@
+﻿@model LamLaiTX2Lan2.Models.HocSinh
+
+@{
+    ViewBag.Title = "Xoá dữ liệu";
+}
+
+<h2>Xoá dữ liệu</h2>
+
+<h3>Bạn có chắc chắn muốn xoá?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LopHoc.tenlop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LopHoc.tenlop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hoten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hoten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anhduthi)
+        </dt>
+
+        <dd>
+            @{string path = "~/Images/" + Model.anhduthi; }
+            <img src="@Url.Content(path)" alt="anh" width="100" height="100" />
+            @Html.DisplayFor(model => model.anhduthi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diemthi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diemthi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Trở lại danh sách", "Xemdanhsach")
+        </div>
+    }
+</div>

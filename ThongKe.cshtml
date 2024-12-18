@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LamLaiTX2Lan2.Models.ThongKe>
+@{
+    ViewBag.Title = "ThongKe";
+}
+<h2>Thống kê</h2>
+<table class="table">
+    <tr>
+        <th>
+            mã lớp
+        </th>
+        <th>
+            Số lượng
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.malop
+            </td>
+            <td>
+                @item.sl
+            </td>
+        </tr>
+    }
+
+</table>
